@@ -207,3 +207,9 @@ footer { border-top: 1px solid var(--line); padding-block: 36px 48px; color: var
 .shot img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block}
 .nav{overflow-x:auto;scrollbar-width:none}
 [hidden] { display: none !important; }
+
+.shot { margin: 0; }
+.shot img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 30px 80px -30px rgba(70, 120, 255, .35); }
+.shot figcaption { margin-top: 10px; color: var(--muted); font-size: .85rem; }
+/* hide page until the language is applied, so Turkish never flashes before English */
+html.i18n-wait body { visibility: hidden; }

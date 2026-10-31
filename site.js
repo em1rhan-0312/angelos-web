@@ -42,6 +42,7 @@
   var saved = get("angel-lang");
   var initial = saved || "en";
   if (initial === "en") apply("en"); else if (langBtn) langBtn.textContent = "EN";
+  root.classList.remove("i18n-wait");
   if (langBtn) langBtn.addEventListener("click", function () { apply(root.getAttribute("lang") === "en" ? "tr" : "en"); });
 
   /* ---------- copy buttons ---------- */
