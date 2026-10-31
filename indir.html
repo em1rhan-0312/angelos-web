@@ -9,10 +9,18 @@
 <button class="tool" id="theme-btn" type="button" aria-label="Tema / Theme"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 2a6 6 0 0 0 0 12z" fill="currentColor"/></svg></button>
 </div></div></header>
 <main>
-<div class="wrap page-title"><h1 data-i18n="d.h1">İndir</h1><p data-i18n="d.lead">Angel OS şu an alfa aşamasında. Hazır ISO henüz yayınlanmadı.</p></div>
+<div class="wrap page-title"><h1 data-i18n="d.h1">İndir</h1><p data-i18n="d.lead">Angel OS şu an alfa aşamasında. İlk herkese açık ISO aşağıda.</p></div>
 <section><div class="wrap">
 <div class="rows">
-<div class="row"><h3 data-i18n="d.a">Durum</h3><div><p class="note" data-i18n="d.a1">İlk herkese açık ISO yayınlandığında bağlantısı ve SHA256 sağlama toplamı bu sayfada olacak. Duyuru resmi Instagram hesabından yapılır.</p></div></div>
+<div class="row" id="rel-wait"><h3 data-i18n="d.a">Durum</h3><div><p class="note" data-i18n="d.a1">İlk herkese açık ISO yayınlandığında bağlantısı ve SHA256 sağlama toplamı bu sayfada olacak. Duyuru resmi Instagram hesabından yapılır.</p></div></div>
+<div class="row" id="rel-live" hidden><h3 data-i18n="d.rel">Son sürüm</h3><div>
+<p><b id="rel-ver"></b> <span id="rel-meta"></span></p>
+<div class="btn-row" style="margin-top:14px"><a class="btn primary" id="rel-dl" href="#" rel="noopener" data-i18n="d.dl">ISO'yu indir</a></div>
+<p style="margin-top:18px"><span data-i18n="d.sha">SHA256 sağlama toplamı</span><br><code id="rel-sha" style="word-break:break-all"></code></p>
+<p style="margin-top:10px"><span data-i18n="d.ver">İndirdikten sonra doğrula (Linux / macOS):</span><br><code id="rel-cmd" style="word-break:break-all"></code></p>
+<p style="margin-top:10px"><span data-i18n="d.verw">Windows (PowerShell):</span><br><code id="rel-cmdw" style="word-break:break-all"></code></p>
+<p class="note" style="margin-top:14px" data-i18n="d.alpha">Alfa sürümdür. Önce sanal makinede dene, önemli verilerin olduğu diske kurma.</p>
+</div></div>
 <div class="row"><h3 data-i18n="d.b">Gereksinimler</h3><ul><li data-i18n="d.b1">64 bit (x86_64) işlemci</li><li data-i18n="d.b2">En az 2 GB RAM (sanal makinede 4 GB önerilir)</li><li data-i18n="d.b3">En az 15 GB boş disk alanı</li><li data-i18n="d.b4">Kurulum için internet bağlantısı</li></ul></div>
 </div></div></section>
 
@@ -25,11 +33,11 @@
 <div class="foot">
 <div><p data-i18n="foot.about">Angel OS, Arch Linux tabanlı bağımsız bir Linux dağıtımı projesidir.</p></div>
 <ul>
-<li><a href="https://github.com/valkyrie-0312" rel="noopener">GitHub</a></li>
+<li><a href="https://github.com/em1rhan-0312" rel="noopener">GitHub</a></li>
 <li><a href="https://gitlab.com/emirhan.0312" rel="noopener">GitLab</a></li>
 <li><a href="https://instagram.com/angel0sofficial" rel="noopener">Instagram</a></li>
 <li><a href="iletisim.html" data-i18n="foot.mail">E-posta</a></li>
 </ul></div>
 <p class="legal" data-i18n="foot.legal">Angel OS, Arch Linux, KDE veya Anthropic dahil hiçbir kuruluşla resmi bağı olmayan bağımsız bir projedir. Arch Linux ve KDE adları sahiplerinin markalarıdır.</p>
-</div></footer><script src="i18n.js"></script><script src="site.js"></script></body>
+</div></footer><script src="i18n.js"></script><script src="release.js"></script><script src="site.js"></script><script>(function(){var r=window.ANGEL_RELEASE;if(!r||!r.url||!r.sha256)return;document.getElementById("rel-wait").hidden=true;document.getElementById("rel-live").hidden=false;document.getElementById("rel-ver").textContent="Angel OS "+r.version;document.getElementById("rel-meta").textContent="· "+r.date+(r.size?" · "+r.size:"");document.getElementById("rel-dl").href=r.url;document.getElementById("rel-sha").textContent=r.sha256+"  "+r.file;document.getElementById("rel-cmd").textContent="sha256sum "+r.file;document.getElementById("rel-cmdw").textContent="Get-FileHash "+r.file+" -Algorithm SHA256";})();</script></body>
 </html>
