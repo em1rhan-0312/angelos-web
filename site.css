@@ -206,3 +206,4 @@ footer { border-top: 1px solid var(--line); padding-block: 36px 48px; color: var
 
 .shot img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block}
 .nav{overflow-x:auto;scrollbar-width:none}
+[hidden] { display: none !important; }
